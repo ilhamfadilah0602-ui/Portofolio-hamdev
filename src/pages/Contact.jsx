@@ -32,10 +32,10 @@ const Contact = () => {
             <h3>Let's Talk!</h3>
             <p>Punya pertanyaan atau ingin bekerja sama? Kirimkan pesan langsung ke WhatsApp saya.</p>
             <div className="info-item">
-              <span>📍</span> Ngamprah, West Java
+              <span>📍</span> pakuhaji-Ngamprah-Bandung Barat-Jawa Barat-Indonesia
             </div>
             <div className="info-item">
-              <span>📧</span> ilham@example.com
+              <span>📧</span> ilhampelajarrpl.0602@gmail.com
             </div>
           </div>
 

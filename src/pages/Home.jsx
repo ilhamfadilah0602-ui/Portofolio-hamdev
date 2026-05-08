@@ -25,7 +25,7 @@ const Home = () => {
           </p>
 
           <div className="home-btns">
-            <a href="https://github.com/ilhamdev" target="_blank" rel="noreferrer" className="btn btn-filled">
+            <a href="https://github.com/ilhamfadilah0602-ui" target="_blank" rel="noreferrer" className="btn btn-filled">
               View GitHub
             </a>
           </div>
