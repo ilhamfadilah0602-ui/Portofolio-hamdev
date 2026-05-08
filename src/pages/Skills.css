@@ -1,0 +1,165 @@
+.skills-section {
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.skills-section .title {
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--accent);
+}
+
+/* --- MOBILE FIRST (Tampilan HP) --- */
+.skills-container {
+  display: flex;
+  flex-direction: column; /* Ikon di atas, Detail di bawah */
+  gap: 25px;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 kolom kecil sejajar di HP */
+  gap: 12px;
+}
+
+.skill-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 15px 5px;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.skill-card img {
+  width: 32px;
+  height: 32px;
+  filter: grayscale(1); /* Ikon abu-abu jika tidak dipilih */
+  transition: 0.3s;
+}
+
+.skill-card span {
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  font-weight: 500;
+}
+
+.skill-card.active {
+  background: rgba(34, 211, 238, 0.1);
+  border-color: var(--accent);
+  transform: translateY(-3px);
+}
+
+.skill-card.active img {
+  filter: grayscale(0); /* Ikon berwarna kembali */
+}
+
+.skill-card.active span {
+  color: var(--accent);
+}
+
+/* Kotak Detail */
+.detail-card {
+  background: #0f172a;
+  border: 1px solid rgba(34, 211, 238, 0.2);
+  padding: 25px;
+  border-radius: 20px;
+  animation: slideUp 0.4s ease-out;
+}
+
+.detail-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 15px;
+}
+
+.detail-icon {
+  width: 45px;
+}
+
+.detail-title h3 {
+  font-size: 1.4rem;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.detail-body p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--text-dim);
+  text-align: left;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  font-size: 0.65rem;
+  background: rgba(34, 211, 238, 0.1);
+  color: var(--accent);
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+/* --- DESKTOP VIEW (Monitor/Laptop) --- */
+@media (min-width: 768px) {
+  .skills-container {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr; /* Kembali ke layout sampingan */
+    gap: 50px;
+    align-items: start;
+  }
+
+  .skills-list {
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 15px;
+  }
+
+  .skill-card {
+    padding: 25px 15px;
+  }
+
+  .skill-card img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .skill-card span {
+    font-size: 0.85rem;
+  }
+
+  .detail-card {
+    padding: 40px;
+    position: sticky;
+    top: 100px;
+  }
+
+  .detail-icon {
+    width: 60px;
+  }
+
+  .detail-title h3 {
+    font-size: 2rem;
+  }
+
+  .detail-body p {
+    font-size: 1rem;
+  }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,35 @@
+:root {
+  --bg: #020617;
+  --accent: #22d3ee;
+  --text: #f8fafc;
+  --text-dim: #94a3b8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden; /* Kunci agar tidak goyang ke samping */
+  line-height: 1.5;
+}
+
+/* Container utama agar konten tidak mentok ke pinggir di layar lebar */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+section {
+  padding: 80px 0; /* Memberi jarak antar halaman */
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
